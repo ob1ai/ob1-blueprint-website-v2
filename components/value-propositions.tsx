@@ -2,7 +2,6 @@
 
 import { Microscope, Zap, Layers } from "lucide-react"
 import { Card } from "@/components/ui/card"
-import Image from "next/image"
 
 export default function ValuePropositions() {
   const propositions = [
@@ -27,7 +26,7 @@ export default function ValuePropositions() {
   ]
 
   return (
-    <section className="py-24 bg-white">
+    <section className="pt-12 pb-24" style={{ backgroundColor: "var(--color-slate-50)" }}>
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-slate-900 mb-4">
@@ -39,36 +38,15 @@ export default function ValuePropositions() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        <div className="grid md:grid-cols-3 gap-8">
           {propositions.map((prop, idx) => (
             <Card key={idx} className="p-8 border-2 border-slate-200 hover:border-orange-500 transition-all">
               <prop.icon className="h-12 w-12 text-orange-500 mb-4" />
-              <h3 className="text-xl font-bold text-slate-900 mb-3">{prop.title}</h3>
+              <h3 className="text-xl font-bold text-slate-900 mb-2">{prop.title}</h3>
               <p className="text-slate-600 leading-relaxed">{prop.description}</p>
             </Card>
           ))}
         </div>
-
-        {/* Founder Quote Section */}
-        <Card className="max-w-3xl mx-auto p-8 bg-white border-l-4 border-orange-500">
-          <p className="text-lg text-slate-700 italic mb-4">
-            "AI gives you back your most precious resource: your time & attention. You get to focus on work that
-            matters. Work that brings meaning. Work that requires your uniqueness."
-          </p>
-          <div className="flex items-center gap-4">
-            <Image
-              src="/chris-mccarthy-profile.jpg"
-              alt="Chris McCarthy"
-              width={48}
-              height={48}
-              className="rounded-full object-cover"
-            />
-            <div>
-              <p className="font-semibold text-slate-900">Chris McCarthy</p>
-              <p className="text-sm text-slate-600">Founder & AI Solutions Architect</p>
-            </div>
-          </div>
-        </Card>
       </div>
     </section>
   )

@@ -6,7 +6,7 @@ import Link from "next/link"
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-slate-950">
+    <section className="relative min-h-[90vh] md:min-h-[70vh] flex items-center overflow-hidden bg-slate-950">
       {/* Architectural Blueprint Background */}
       <div className="absolute inset-0 opacity-10">
         <div

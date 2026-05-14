@@ -27,3 +27,6 @@ yarn-error.log*
 next-env.d.ts
 
 .vercel
+
+# npm lockfile (repo uses pnpm)
+package-lock.json
