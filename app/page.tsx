@@ -1,7 +1,7 @@
 import HeroSection from "@/components/hero-section"
-import ReadinessScoreSection from "@/components/readiness-score-section"
 import BlueprintMethodology from "@/components/blueprint-methodology"
 import ValuePropositions from "@/components/value-propositions"
+import GovernanceAsAService from "@/components/governance-as-a-service"
 import ExecutiveFAQ from "@/components/executive-faq"
 import FinalCTA from "@/components/final-cta"
 import Navbar from "@/components/navbar"
@@ -12,8 +12,8 @@ export default function HomePage() {
     <main className="min-h-screen">
       <Navbar />
       <HeroSection />
-      <ReadinessScoreSection />
       <ValuePropositions />
+      <GovernanceAsAService />
       <BlueprintMethodology />
       <ExecutiveFAQ />
       <FinalCTA />
