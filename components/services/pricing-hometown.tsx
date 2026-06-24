@@ -13,18 +13,22 @@ export default function PricingHometown() {
               <div className="flex items-center gap-3 mb-6">
                 <div className="h-px w-8 bg-orange-500" />
                 <span className="text-xs font-mono text-orange-500 uppercase tracking-widest">
-                  Investment
+                  Return on Governance
                 </span>
               </div>
 
               <p className="text-4xl md:text-5xl font-bold text-white mb-4">
-                Engagements starting at{" "}
-                <span className="text-orange-500">$500</span>
+                <span className="text-orange-500">40-60%</span> of IT capacity,
+                locked in firefighting.
               </p>
 
               <p className="text-lg text-slate-400 leading-relaxed">
-                Every engagement is scoped to your specific situation — from
-                focused diagnostics to full-scale transformation architecture.
+                In a recent manufacturing audit, the OB.1 Operational Blueprint
+                surfaced 40 to 60 percent of IT capacity lost to reactive
+                firefighting, plus 40+ hours a month sunk into a manual financial
+                close, before a single new tool was bought. We scope every
+                engagement to the value it unlocks, not a day rate. Rules before
+                tools.
               </p>
             </div>
 

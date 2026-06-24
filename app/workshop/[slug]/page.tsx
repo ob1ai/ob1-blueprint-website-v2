@@ -6,6 +6,7 @@ import Footer from '@/components/footer';
 import Link from 'next/link';
 import { ArrowLeft, Calendar, Clock, User } from 'lucide-react';
 import { BlogArticleBody } from '@/components/workshop/blog-article-body';
+import { CtaBand } from '@/components/cta-band';
 
 export async function generateStaticParams() {
   return blogPosts.map((post) => ({
@@ -128,34 +129,6 @@ export default async function BlogArticlePage({
         <div className="container mx-auto px-6 max-w-3xl">
           <BlogArticleBody content={post.content} />
 
-          {/* CTA Footer */}
-          <div className="mt-16 p-8 bg-[#0D1B2A] rounded-sm text-center">
-            <h3 className="text-xl font-bold text-white mb-3">
-              Ready to put this thinking to work?
-            </h3>
-            <p className="text-stone-400 text-sm mb-6 max-w-md mx-auto">
-              Start with a diagnostic assessment to see where you stand, then let us help you build from there.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-              <a
-                href="https://app.auditynow.com/survey/16b293db06d1"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-sm transition-colors text-sm"
-              >
-                Take the 60-Second Snapshot
-              </a>
-              <a
-                href="https://airtable.com/appdUlBzoWdtw59KU/pagOSNcWAQqsUwe3O/form"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block px-6 py-3 border border-stone-600 text-stone-300 hover:text-white hover:border-stone-400 font-medium rounded-sm transition-colors text-sm"
-              >
-                Book a Blueprint Session
-              </a>
-            </div>
-          </div>
-
           {/* Back link */}
           <div className="mt-10">
             <Link
@@ -168,6 +141,26 @@ export default async function BlogArticlePage({
           </div>
         </div>
       </section>
+
+      {/* Full-width dark CTA band — bridges the cream article body into the dark footer */}
+      <CtaBand
+        heading={
+          <>
+            Ready to put this thinking to{' '}
+            <span className="text-orange-500">work?</span>
+          </>
+        }
+        subhead="Start with a diagnostic assessment to see where you stand, then let us help you build from there."
+        primary={{
+          label: 'Get Your AI Readiness Score',
+          href: 'https://app.auditynow.com/survey/16b293db06d1',
+          icon: 'fileCheck',
+        }}
+        secondary={{
+          label: 'Talk to Us',
+          href: 'https://airtable.com/appdUlBzoWdtw59KU/pagOSNcWAQqsUwe3O/form',
+        }}
+      />
 
       <Footer />
     </main>
