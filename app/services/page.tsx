@@ -4,6 +4,7 @@ import Footer from "@/components/footer"
 import ServicesHero from "@/components/services/services-hero"
 import EngagementPhases from "@/components/services/engagement-phases"
 import EngagementTimeline from "@/components/services/engagement-timeline"
+import MethodologyNote from "@/components/services/methodology-note"
 import BlueprintInAction from "@/components/services/blueprint-in-action"
 import PricingHometown from "@/components/services/pricing-hometown"
 import ServicesCTA from "@/components/services/services-cta"
@@ -28,6 +29,7 @@ export default function ServicesPage() {
       <ServicesHero />
       <EngagementPhases />
       <EngagementTimeline />
+      <MethodologyNote />
       <BlueprintInAction />
       <PricingHometown />
       <ServicesCTA />

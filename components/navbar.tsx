@@ -11,6 +11,7 @@ export default function Navbar() {
 
   const navLinks = [
     { label: "Services", href: "/services" },
+  { label: "Governance", href: "/governance" },
     { label: "About", href: "/about" },
     { label: "The Workshop", href: "/workshop" },
     { label: "Skill Builder", href: "https://skills.ob1ai.co" },

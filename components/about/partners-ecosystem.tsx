@@ -4,34 +4,40 @@ import { ArrowUpRight } from "lucide-react"
 
 const partners = [
   {
-    name: "NeuralSeek",
-    url: "https://neuralseek.com",
-    description: "AI Platform & NLP Engine",
+    name: "Frantz Ward LLP",
+    url: "https://www.frantzward.com",
+    description: "AI Regulations & Legal Governance",
+    featured: true,
+  },
+  {
+    name: "CAO Advisory Services",
+    url: "https://caoadvisoryllc.com",
+    description: "Executive & Change Management",
+    featured: true,
   },
   {
     name: "Audity AI",
     url: "https://auditynow.com",
     description: "AI Readiness Assessment Platform",
+    featured: false,
   },
   {
-    name: "RAC Projects",
-    url: "https://racprojects.ai",
-    description: "Strategic AI Consulting",
-  },
-  {
-    name: "Diver8ent",
-    url: "https://diver8ent.com",
-    description: "Creative & Brand Strategy",
+    name: "NeuralSeek",
+    url: "https://neuralseek.com",
+    description: "Enterprise RAG, Data & Knowledge Intelligence",
+    featured: false,
   },
   {
     name: "Kairos Solutions",
     url: "https://kairossolutionsai.com",
     description: "AI/ML Strategy & Data Intelligence",
+    featured: false,
   },
   {
     name: "Viable Synergy",
     url: "https://viablesynergy.com",
     description: "Revenue Operations & Growth Strategy",
+    featured: false,
   },
 ]
 
@@ -54,7 +60,8 @@ export default function PartnersEcosystem() {
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
               OB.1 designs the blueprint. Our vetted partners execute. No
-              conflicts of interest — just the right team for every build.
+              conflicts of interest, just the right team for every build,
+              with legal and executive judgment built into the bench.
             </p>
           </div>
 
@@ -66,7 +73,11 @@ export default function PartnersEcosystem() {
                 href={partner.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group p-6 bg-slate-900/60 border border-slate-800 rounded-lg hover:border-orange-500/30 transition-all duration-300"
+                className={`group p-6 bg-slate-900/60 border rounded-lg transition-all duration-300 ${
+                  partner.featured
+                    ? "border-orange-500/40 hover:border-orange-500/70"
+                    : "border-slate-800 hover:border-orange-500/30"
+                }`}
               >
                 <div className="flex items-start justify-between mb-3">
                   <h3 className="text-lg font-bold text-white group-hover:text-orange-400 transition-colors">
@@ -75,9 +86,23 @@ export default function PartnersEcosystem() {
                   <ArrowUpRight className="h-4 w-4 text-slate-600 group-hover:text-orange-500 transition-colors flex-shrink-0 mt-1" />
                 </div>
                 <p className="text-sm text-slate-400">{partner.description}</p>
+                {partner.featured && (
+                  <p className="mt-3 text-[11px] font-mono uppercase tracking-widest text-orange-500/80">
+                    Governance Bench
+                  </p>
+                )}
               </a>
             ))}
           </div>
+
+          <p className="mt-8 text-center text-sm text-slate-500 leading-relaxed">
+            Every industry governance rubric we publish is gated by counsel
+            review through Frantz Ward.{" "}
+            <a href="/governance" className="text-orange-400 hover:text-orange-300 transition-colors font-medium">
+              See how governance works
+            </a>
+            .
+          </p>
         </div>
       </div>
     </section>
