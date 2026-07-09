@@ -1,6 +1,6 @@
 "use client"
 
-import { Scale, ShieldCheck, ArrowUpRight } from "lucide-react"
+import { ArrowUpRight } from "lucide-react"
 
 const checkpoints = [
   { n: "01", title: "AI Readiness Score", body: "An 82-point assessment scored 0-100. No engagement starts without a documented data hygiene and AI maturity baseline." },
@@ -204,75 +204,7 @@ export default function GovernanceContent() {
         </div>
       </section>
 
-      {/* Legal partnership: Frantz Ward */}
-      <section className="py-24 bg-slate-950 border-t border-slate-800">
-        <div className="container mx-auto px-6">
-          <div className="max-w-5xl mx-auto">
-            <div className="flex items-center gap-3 mb-6">
-              <Scale className="h-5 w-5 text-orange-500" />
-              <span className="text-xs font-mono text-orange-500 uppercase tracking-widest">
-                AI Regulations &amp; Legal Governance Partner
-              </span>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-              Reviewed by counsel. <span className="text-orange-500">Not by a chatbot.</span>
-            </h2>
-            <div className="grid md:grid-cols-5 gap-10 items-start">
-              <div className="md:col-span-3">
-                <p className="text-lg text-slate-300 leading-relaxed mb-5">
-                  Our governance work is built in partnership with{" "}
-                  <a
-                    href="https://www.frantzward.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-orange-400 font-medium hover:text-orange-300 transition-colors"
-                  >
-                    Frantz Ward LLP
-                  </a>
-                  , a Cleveland-based law firm whose industry-specific AI law
-                  teams cover the regulated sectors where our clients operate.
-                  Every industry rubric in the governance library is
-                  research-grounded by OB.1 and gated by counsel review before it
-                  reaches a client.
-                </p>
-                <p className="text-lg text-slate-400 leading-relaxed">
-                  That pairing is the point: OB.1 builds the operational
-                  governance architecture; Frantz Ward brings the legal and
-                  regulatory judgment that makes it defensible. When your board,
-                  your auditor, or your regulator asks who reviewed your AI
-                  posture, you have a real answer.
-                </p>
-              </div>
-              <div className="md:col-span-2 rounded-lg border border-slate-800 bg-slate-900/60 p-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <ShieldCheck className="h-5 w-5 text-orange-500" />
-                  <span className="text-xs font-mono text-orange-500 uppercase tracking-widest">
-                    What counsel review gates
-                  </span>
-                </div>
-                <ul className="space-y-3">
-                  {[
-                    "Industry governance rubrics before client-facing use",
-                    "Regulatory interpretation across sector regimes",
-                    "AI policy frameworks and vendor accountability terms",
-                    "Engagement paper for coalition and partner builds",
-                  ].map((item) => (
-                    <li key={item} className="flex gap-3 text-sm text-slate-300 leading-relaxed">
-                      <span aria-hidden className="mt-2 h-1.5 w-1.5 shrink-0 rounded-sm bg-orange-500" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-                <p className="mt-5 pt-4 border-t border-slate-800 text-xs text-slate-500 leading-relaxed">
-                  OB.1 provides governance architecture, not legal advice. Legal
-                  advice comes from counsel, which is exactly why this
-                  partnership exists.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Legal partnership section (Frantz Ward LLP) temporarily removed 2026-07-09 pending Frantz Ward ethics dept green light on the public partnership reference. Full markup preserved in git history; restore when approved. */}
 
       {/* CTA */}
       <section className="py-24 bg-slate-950 border-t border-slate-800">
